@@ -1247,9 +1247,602 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
-  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   .reveal-right {
     opacity: 0;
     transform: translateX(40px);
-    transition: opacity 0.7s ease,
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ========= RESPONSIVE ========= */
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    nav { display: none; }
+    .header-inner { padding: 0 16px; height: 60px; }
+    .logo-text .main { font-size: 18px; }
+    .logo-badge { width: 40px; height: 40px; font-size: 14px; }
+    .hero-title { font-size: clamp(40px, 12vw, 80px); }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 300px; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+    .treinos-grid { grid-template-columns: 1fr; }
+    .treino-card.big { grid-column: span 1; aspect-ratio: 16/9; }
+    .diff-grid { grid-template-columns: repeat(3, 1fr); }
+    .equipe-grid { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+    .galeria-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+    .loc-grid { grid-template-columns: 1fr; }
+    .contato-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+    .social-links { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#inicio" class="logo-area">
+        <div class="logo-badge">GF</div>
+        <div class="logo-text">
+          <div class="main">GF TEAM</div>
+          <div class="sub">CT FUNA AZEVEDO</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#treinos">Treinos</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#contato" class="btn-header">Contato</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        ACADEMIA DE LUTA
+      </div>
+      <h1 class="hero-title">
+        GF TEAM<br>
+        <span class="gold">JIU-JITSU & MMA</span>
+      </h1>
+      <p class="hero-sub">FORÇA • DISCIPLINA • RESPEITO</p>
+      <div class="hero-buttons">
+        <a href="#contato" class="btn-primary">
+          <i class="fas fa-play"></i>
+          COMEÇAR AGORA
+        </a>
+        <a href="#sobre" class="btn-secondary">
+          <i class="fas fa-info-circle"></i>
+          SAIBA MAIS
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <i class="fas fa-chevron-down"></i>
+      <span>ROLAR PARA BAIXO</span>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">ALUNOS</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">ANOS</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">CAMPEÕES</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">SUPORTE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre Section -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-label">
+        <span>SOBRE NÓS</span>
+      </div>
+      <h2 class="section-title">
+        A <span class="gold">GF TEAM</span> É MAIS QUE UMA ACADEMIA
+      </h2>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <p>
+            Fundada em 2013, a GF Team CT Funa Azevedo é referência em Jiu-Jitsu e MMA em Nova Iguaçu. 
+            Com instrutores qualificados e metodologia comprovada, formamos atletas e cidadãos.
+          </p>
+          <p>
+            Nossa missão é promover saúde, disciplina e respeito através das artes marciais, 
+            criando uma comunidade unida e motivada.
+          </p>
+          <div class="sobre-pillars">
+            <div class="pillar">
+              <i class="fas fa-dumbbell"></i>
+              <span>TREINAMENTO INTENSO</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-users"></i>
+              <span>COMUNIDADE UNIDA</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-trophy"></i>
+              <span>CAMPEÕES FORMANDO CAMPEÕES</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-heart"></i>
+              <span>PAIXÃO PELAS LUTAS</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-img">
+          <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80" alt="Equipe GF Team">
+          <div class="sobre-img-overlay">
+            <div class="sobre-img-tag">FUNDAÇÃO 2013</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treinos Section -->
+  <section id="treinos">
+    <div class="container">
+      <div class="section-label">
+        <span>MODALIDADES</span>
+      </div>
+      <h2 class="section-title">
+        TREINOS PARA TODOS OS <span class="gold">NÍVEIS</span>
+      </h2>
+      <div class="treinos-grid">
+        <div class="treino-card big">
+          <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=800&q=80" alt="Jiu-Jitsu">
+          <div class="treino-card-overlay">
+            <div class="treino-icon">
+              <i class="fas fa-user-ninja"></i>
+            </div>
+            <div class="treino-card-name">JIU-JITSU</div>
+            <div class="treino-card-desc">
+              Técnica brasileira de grappling, foco em submissões e controle.
+            </div>
+          </div>
+        </div>
+        <div class="treino-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="MMA">
+          <div class="treino-card-overlay">
+            <div class="treino-icon">
+              <i class="fas fa-fist-raised"></i>
+            </div>
+            <div class="treino-card-name">MMA</div>
+            <div class="treino-card-desc">
+              Artes marciais mistas, combinação de striking e grappling.
+            </div>
+          </div>
+        </div>
+        <div class="treino-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Muay Thai">
+          <div class="treino-card-overlay">
+            <div class="treino-icon">
+              <i class="fas fa-hand-rock"></i>
+            </div>
+            <div class="treino-card-name">MUAY THAI</div>
+            <div class="treino-card-desc">
+              Boxe tailandês, ênfase em chutes e joelhadas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Section -->
+  <section id="diferenciais">
+    <div class="container">
+      <div class="section-label">
+        <span>DIFERENCIAIS</span>
+      </div>
+      <h2 class="section-title">
+        POR QUE ESCOLHER A <span class="gold">GF TEAM</span>?
+      </h2>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <i class="fas fa-user-graduate diff-icon"></i>
+          <div class="diff-title">INSTRUTORES QUALIFICADOS</div>
+          <div class="diff-desc">Profissionais com décadas de experiência e títulos mundiais.</div>
+        </div>
+        <div class="diff-card">
+          <i class="fas fa-clock diff-icon"></i>
+          <div class="diff-title">HORÁRIOS FLEXÍVEIS</div>
+          <div class="diff-desc">Aulas diárias em diversos horários para caber na sua rotina.</div>
+        </div>
+        <div class="diff-card">
+          <i class="fas fa-shield-alt diff-icon"></i>
+          <div class="diff-title">SEGURANÇA TOTAL</div>
+          <div class="diff-desc">Equipamentos de proteção e supervisão constante.</div>
+        </div>
+        <div class="diff-card">
+          <i class="fas fa-trophy diff-icon"></i>
+          <div class="diff-title">COMPETIÇÕES</div>
+          <div class="diff-desc">Participação em torneios e campeonatos regionais.</div>
+        </div>
+        <div class="diff-card">
+          <i class="fas fa-users diff-icon"></i>
+          <div class="diff-title">COMUNIDADE</div>
+          <div class="diff-desc">Ambiente familiar e motivador para todos os alunos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe Section -->
+  <section id="equipe">
+    <div class="container">
+      <div class="section-label">
+        <span>EQUIPE</span>
+      </div>
+      <h2 class="section-title">
+        CONHEÇA NOSSOS <span class="gold">INSTRUTORES</span>
+      </h2>
+      <div class="equipe-grid">
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <div class="instructor-avatar">FA</div>
+            <div class="instructor-belt">FAIXA PRETA</div>
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-name">FUNA AZEVEDO</div>
+            <div class="instructor-role">INSTRUTOR PRINCIPAL</div>
+            <div class="instructor-bio">
+              Mestre em Jiu-Jitsu com 15 anos de experiência, campeão brasileiro e mundial.
+            </div>
+          </div>
+        </div>
+        <div class="instructor-card">
+          <div class="instructor-img">
+            <div class="instructor-avatar">GF</div>
+            <div class="instructor-belt">FAIXA PRETA</div>
+          </div>
+          <div class="instructor-info">
+            <div class="instructor-name">GUSTAVO FERREIRA</div>
+            <div class="instructor-role">INSTRUTOR ASSISTENTE</div>
+            <div class="instructor-bio">
+              Especialista em MMA, com participação em eventos internacionais.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria Section -->
+  <section id="galeria">
+    <div class="container galeria-header">
+      <div class="section-label">
+        <span>GALERIA</span>
+      </div>
+      <h2 class="section-title">
+        MOMENTOS DA <span class="gold">GF TEAM</span>
+      </h2>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80" alt="Treino">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Competição">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400&q=80" alt="Equipe">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Aula">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=400&q=80" alt="Trofeu">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+      <div class="galeria-item">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Grupo">
+        <div class="galeria-overlay">
+          <i class="fas fa-search-plus"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização Section -->
+  <section id="localizacao">
+    <div class="container">
+      <div class="section-label">
+        <span>LOCALIZAÇÃO</span>
+      </div>
+      <h2 class="section-title">
+        VENHA NOS <span class="gold">VISITAR</span>
+      </h2>
+      <div class="loc-grid">
+        <div class="loc-info">
+          <div class="loc-address">
+            <div class="loc-address-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>ENDEREÇO</strong>
+                <span>Rua das Lutas, 123 - Centro<br>Nova Iguaçu - RJ</span>
+              </div>
+            </div>
+            <div class="loc-address-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>HORÁRIOS</strong>
+                <span>Seg-Sex: 6h às 22h<br>Sáb: 8h às 18h<br>Dom: 10h às 16h</span>
+              </div>
+            </div>
+            <div class="loc-address-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>CONTATO</strong>
+                <span>(21) 99999-9999</span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-maps">
+            <i class="fas fa-external-link-alt"></i>
+            VER NO MAPS
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.123456789012!2d-43.1234567!3d-22.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzI0LjQiUyA0M8KwMDcnMjQuMyJX!5e0!3m2!1sen!2sbr!4v1234567890123!5m2!1sen!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta">
+    <div class="cta-inner">
+      <h2 class="cta-title">
+        PRONTO PARA <span class="gold">COMEÇAR</span>?
+      </h2>
+      <p class="cta-sub">JUNTE-SE À NOSSA COMUNIDADE E TRANSFORME SUA VIDA</p>
+      <div class="cta-line"></div>
+      <a href="#contato" class="btn-primary">
+        <i class="fas fa-rocket"></i>
+        INSCREVA-SE AGORA
+      </a>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-label">
+        <span>CONTATO</span>
+      </div>
+      <h2 class="section-title">
+        FALE <span class="gold">CONOSCO</span>
+      </h2>
+      <div class="contato-grid">
+        <div class="contato-form">
+          <form>
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">ENVIAR MENSAGEM</button>
+          </form>
+        </div>
+        <div class="contato-social">
+          <div class="social-links">
+            <a href="#" class="social-link whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="#" class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="social-link facebook">
+              <i class="fab fa-facebook"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="social-link youtube">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="contato-info-box">
+            <h3>INFORMAÇÕES</h3>
+            <div class="contato-info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contato@gfteam.com.br</span>
+            </div>
+            <div class="contato-info-item">
+              <i class="fas fa-phone"></i>
+              <span>(21) 99999-9999</span>
+            </div>
+            <div class="contato-info-item">
+              <i class="fas fa-clock"></i>
+              <span>Atendimento: Seg-Sex 8h-18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo-area">
+          <div class="logo-badge">GF</div>
+          <div class="logo-text">
+            <div class="main">GF TEAM</div>
+            <div class="sub">CT FUNA AZEVEDO</div>
+          </div>
+        </a>
+        <p>
+          A GF Team é referência em Jiu-Jitsu e MMA em Nova Iguaçu, 
+          formando atletas e cidadãos com disciplina e respeito.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Início</a></li>
+          <li><a href="#sobre"><i class="fas fa-chevron-right"></i>Sobre</a></li>
+          <li><a href="#treinos"><i class="fas fa-chevron-right"></i>Treinos</a></li>
+          <li><a href="#equipe"><i class="fas fa-chevron-right"></i>Equipe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#treinos"><i class="fas fa-chevron-right"></i>Jiu-Jitsu</a></li>
+          <li><a href="#treinos"><i class="fas fa-chevron-right"></i>MMA</a></li>
+          <li><a href="#treinos"><i class="fas fa-chevron-right"></i>Muay Thai</a></li>
+          <li><a href="#contato"><i class="fas fa-chevron-right"></i>Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+          <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i>YouTube</a></li>
+          <li><a href="#"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 GF Team CT Funa Azevedo. Todos os direitos reservados.</p>
+      <p>Desenvolvido com <span class="gold-text">♥</span> pela equipe GF</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-label">Fale Conosco</div>
+    <a href="#" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Hero background animation
+    window.addEventListener('load', () => {
+      document.querySelector('.hero-bg').classList.add('loaded');
+    });
+
+    // Reveal animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Add reveal classes to sections
+    document.querySelectorAll('section > .container').forEach(section => {
+      section.classList.add('reveal');
+    });
+
+    document.querySelectorAll('.sobre-grid, .treinos-grid, .diff-grid, .equipe-grid, .loc-grid, .contato-grid').forEach(grid => {
+      grid.classList.add('reveal');
+    });
+
+    // Form submission (placeholder)
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Mensagem enviada! Entraremos em contato em breve.');
+    });
+  </script>
+</body>
+</html>
